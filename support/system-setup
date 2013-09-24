@@ -108,7 +108,7 @@ cd ~/Workspace/dotfiles && rake install
 source ~/.bashrc
 
 # Install basic packages needed to run this script
-sudo apt-get install --yes --force-yes build-essential curl tree libreadline6-dev zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libgdbm-dev libncurses5-dev automake libtool bison libffi-dev linux-headers-`uname -r` vim openssh-server ia32-libs
+sudo apt-get install --yes --force-yes build-essential curl tree libreadline6-dev zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libgdbm-dev libncurses5-dev automake libtool bison libffi-dev linux-headers-`uname -r` vim openssh-server ia32-libs openssh-server
 
 # Adding libGL
 sudo apt-get install --yes --force-yes libgl1-mesa-dev
