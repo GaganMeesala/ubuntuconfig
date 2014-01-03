@@ -8,6 +8,9 @@ Clone the repo and run the installer script.
 ```
 $ rake install
 ```
+
+Gotcha: Currently supporting only *nix systems.
+
 ### Whats Included
 Setup Scripts
 Bash aliases, configs
