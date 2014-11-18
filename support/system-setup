@@ -18,7 +18,7 @@ sudo sed -i "/${line}/ s/# *//" /etc/apt/sources.list
 sudo apt-get update
 
 # Install Git & Git Extras
-sudo apt-get install --yes --force-yes git git-core tig
+sudo apt-get install --yes --force-yes git git-core tig curl
 
 ################################################################
 # Heroku Toolbelt ##############################################
@@ -73,6 +73,7 @@ EOF
 which rvm &> /dev/null
 
 if [ $? -eq 1 ]; then
+  gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
   echo `curl -L https://get.rvm.io | bash -s stable`
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -183,7 +184,7 @@ which android &> /dev/null
 if [ $? -eq 1 ]; then
   mkdir -p ~/opt/local
   cd ~/opt/local
-  echo `wget http://dl.google.com/android/android-sdk_r22-linux.tgz`
+  echo `wget http://dl.google.com/android/android-sdk_r24-linux.tgz`
   echo `gunzip android-sdk_r22-linux.tgz`
   echo `tar xvf android-sdk_r22-linux.tar`
   mv android-sdk-linux android-sdk
