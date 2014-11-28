@@ -148,7 +148,8 @@ sudo apt-get install --yes --force-yes chromium-browser flashplugin-installer
 sudo cp /usr/lib/flashplugin-installer/libflashplayer.so /usr/lib/chromium-browser/plugins
 
 # Misc
-sudo apt-get install --yes --force-yes xclip compizconfig-settings-manager imagemagick libmagickcore-dev libcurl4-openssl-dev apache2-utils gnome-tweak-tool
+sudo apt-get install --yes --force-yes xclip compizconfig-settings-manager imagemagick libmagickcore-dev libcurl4-openssl-dev apache2-utils gnome-tweak-tool ngrok-client
+
 # Setting caps as super
 setxkbmap -option caps:super
 
