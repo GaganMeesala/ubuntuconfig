@@ -125,8 +125,16 @@ sudo apt-get remove --yes --force-yes openjdk-6-jre openjdk-7-jre openjdk-7-jdk 
 # Remove Maven2
 sudo apt-get purge --yes --force-yes maven2
 
-# Remove un-necessary packages
-sudo apt-get --yes --force-yes autoremove
+# Remove LibreOffice
+sudo apt-get remove --purge libreoffice*
+
+# Remove Firefox
+sudo apt-get purge firefox* firefox-globalmenu firefox-gnome-support
+
+# Remove remnants of other libraries
+sudo apt-get clean
+sudo apt-get autoremove
+
 
 ################################################################
 # Third party repos ############################################
