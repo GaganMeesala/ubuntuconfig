@@ -83,13 +83,13 @@ if [ $? -eq 1 ]; then
   # rvm install ree-1.8.7
   # rvm install 1.9.2
   # rvm install 1.9.3
-  rvm install 2.0.0
+  # rvm install 2.1.0
   rvm all do rvm docs generate
 fi
 
 # Picking an RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-rvm --default use 2.0.0
+rvm --default use 2.1.0
 
 ################################################################
 # Basic Essentials To Get Started ##############################
@@ -110,10 +110,6 @@ source ~/.bashrc
 
 # Install basic packages needed to run this script
 sudo apt-get install --yes --force-yes build-essential curl tree libreadline6-dev zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libgdbm-dev libncurses5-dev automake libtool bison libffi-dev linux-headers-`uname -r` vim openssh-server openssh-server unity-webapp-googledocs
-
-# Adding libGL
-sudo apt-get install --yes --force-yes libgl1-mesa-dev
-sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
 
 # Adding Hipchat
 
