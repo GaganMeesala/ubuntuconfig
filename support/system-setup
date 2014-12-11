@@ -197,9 +197,6 @@ mkdir -p ~/Workspace/reference
 # Android ####################################################
 ################################################################
 
-# Maven
-sudo apt-get install maven
-
 # Android Initialization
 which android &> /dev/null
 
@@ -207,19 +204,8 @@ if [ $? -eq 1 ]; then
   mkdir -p ~/opt/local
   cd ~/opt/local
   echo `wget http://dl.google.com/android/android-sdk_r24-linux.tgz`
-  echo `gunzip android-sdk_r22-linux.tgz`
-  echo `tar xvf android-sdk_r22-linux.tar`
+  echo `gunzip android-sdk_r24-linux.tgz`
+  echo `tar xvf android-sdk_r24-linux.tar`
   mv android-sdk-linux android-sdk
-  rm android-sdk_r22-linux.tar
-else
-  android update sdk --no-ui
+  rm android-sdk_r24-linux.tar
 fi
-
-# Install Maven Android SDK Deployer
-if [ -d ~/opt/local/maven-android-sdk-deployer ]; then
- echo `cd ~/opt/local/maven-android-sdk-deployer && git pull --rebase`
-else
- echo `git clone git://github.com/mosabua/maven-android-sdk-deployer.git ~/opt/local/maven-android-sdk-deployer`
-fi
-
-mvn install -P 4.2
