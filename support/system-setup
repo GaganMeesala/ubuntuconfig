@@ -116,11 +116,6 @@ sudo apt-get remove --yes --force-yes openjdk-6-jre openjdk-7-jre openjdk-7-jdk 
 # Remove Maven2
 sudo apt-get purge --yes --force-yes maven2
 
-# Remove LibreOffice
-sudo apt-get remove --purge libreoffice*
-
-# Remove Firefox
-sudo apt-get purge firefox* firefox-globalmenu firefox-gnome-support
 
 # Remove Web Apps
 sudo apt-get purge unity-webapps-amazon
